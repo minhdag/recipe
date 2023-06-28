@@ -1,0 +1,789 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --black: #0D0D0D;
+    --white: #F2F2F2;
+    --teal: #7ABFBF;
+    --lt-teal: rgba(122, 191, 191, .5);
+    --orange: #EB5428;
+
+    --font:'Bebas Neue', 'Montserrat', sans-serif;
+}
+html{
+    font-family: var(--font);
+    background-color: var(--lt-teal);
+}
+body{
+    width: 80%;
+    max-width: 12800px;
+    min-width: 414px;
+    background-color: var(--white);
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+h1, h2, nav a, nav span{
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+}
+p, dd, dt, li, h4{
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px;
+}
+h1 {
+    font-size: 40px;
+    text-align: center;
+    padding-top: 180px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 25px;
+}
+#svg{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+#svg menu{
+    list-style-type: none;
+    display: flex;
+    padding: 0 1rem;
+    margin-bottom: 0;
+    gap: 2em;
+}
+#svg menu li{
+    display: flex;
+    flex-direction: column-reverse;
+    color: #EB5428;
+}
+.tacos{
+    max-width: 100%;
+    max-height: 100%;
+}
+  
+.tacos img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+dl{
+    padding: 0 1rem;
+}
+dt, dd{
+display: inline-block;
+margin: 0;
+}
+
+dt {
+font-weight: bold;
+margin-right: 10px;
+}
+ol{
+    padding: 0 1rem;
+}
+aside{
+    background-color: var(--teal);
+    padding: 1rem 0;
+}
+aside img{
+    float: left;
+    transform: scale(65%);
+    margin-top: -100px;
+    margin-left: -10px;
+
+}
+aside h3{
+    margin-left: 220px;
+}
+.list{
+    padding: 1rem 0;
+}
+h4{
+    font-weight: bold;
+}
+#connect h2{
+    visibility: hidden;
+}
+#connect{
+    display: block;
+    padding: 0;
+}
+
+#connect ul{
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+
+}
+#connect li{
+    color: var(--orange);
+    font: 16px 'Bebas Neue';
+
+}
+#connect figure{
+    display: inline-block;
+    margin-left: 0;
+    margin-top: -10px
+}
+footer{
+    display: grid;
+}
+footer h2{
+    visibility: hidden;
+}
+footer p{
+    grid-row: 2/2;
+    font: 20px 'Bebas Neue';
+    text-align: center;
+    margin: 0 auto;
+    padding:0;
+}
+footer img{
+    grid-row: 1/2;
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+   
+}
+#main-nav h2{
+    visibility: hidden;
+}
+
+#main-nav {
+    width: 414px;
+    height: 125px;
+    margin-top: -40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+ 
+#main-nav {
+    width: 80%;
+    height: 125px;
+    margin-top: -40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+ 
+#main-nav h2 {
+    height: 1px;
+}
+ 
+#main-nav ul {
+    text-align: center;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+ 
+#main-nav li a {
+    display: block;
+    padding: 20px 20px;
+    margin-bottom: 2px;
+    text-decoration: none;
+    color: #EB5428;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 11px;
+    position: relative;
+    user-select: none;
+}
+
+#main-nav label span {
+    display: block;
+    position: relative;
+    left: 73px;
+    bottom: -80px;
+    transition: background-color .2s ease-out;
+}
+
+#main-nav label span:before, #main-nav label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+#main-nav label span:before {
+    top: 5px;
+}
+#main-nav label span:after {
+    top: -5px;
+}
+#main-nav input {
+    display: none;
+}
+#main-nav input:checked ~ ul {
+    max-height: 500px;
+}
+#main-nav input:checked ~ label span {
+    background: transparent;
+}
+
+#main-nav input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+[href="#home"] {
+    position: absolute;
+    top: 2px;
+    transform: translate(-50%, -50%);
+    cursor: default;
+}
+
+.menu, .avatar{
+    font: 20px 'bebas neue';
+}
+
+.hamburger-icon {
+    top: 10px;
+    left: 40px;
+    stroke: #EB5428;
+    position: absolute;
+}
+
+.icon-tabler-tools-kitchen {
+    background-color: #EB5428;
+    position: absolute;
+    top: 33px;
+    padding: 20px 80px;
+    left: 150px;
+    margin: 10px;
+}
+
+.avatar, .menu {
+  position: absolute;
+  top: 92px;
+  right: 25px;
+}
+
+.icon-tabler-user-circle {
+  stroke: #EB5428;
+  position: absolute;
+  top: 50px;
+  right: 27px;
+}
+
+#main-nav a:hover, #main-nav input:hover{
+  background-color: #EB5428;
+  color: #FFFFFF;
+}
+
+#main-nav div {
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+.breakfast, .brunch, .lunch, .dinner, .appetizers, .desserts, .beverages {
+    display: none;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.search input {
+    border: 3px solid #EB5428;
+    padding: 5px;
+    background-color: #FFFFFF;
+    width: 250px;
+}
+
+button {
+    background-color: #EB5428;
+    border-style: none;
+    cursor: pointer;
+}
+
+.icon-tabler-search {
+   stroke: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        width: 80%;
+    }
+    h1{
+        text-align: left;
+        text-transform: uppercase;
+        font: 40px 'bebas neue';
+        margin-top: 100px;
+        padding-top: 130px;
+        margin-left: 1rem;
+    }
+    
+    #svg{
+        margin-top: 10px;
+        margin-left:auto;
+        background-color: rgba(255, 255, 255, 0.60);
+        position: relative;
+
+    }
+    #svg li{
+        color: #EB5428;
+        font: 16px "bebas neue";
+        margin: 0 60px;
+    }
+
+    .tacos{
+        width: 100%;
+        margin-top: -75px;
+        z-index: 1;
+    }
+    p{
+        font: 16px 'montserrat';
+    }
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+        font: 30px 'bebas neue';
+    }
+    
+    dt{
+        font: 16px 'montserrat';
+        font-weight: bold;
+    }
+    
+    dd{
+        font: 16px 'montserrat';
+    }
+    
+    dt, dd{
+        display: inline;
+    }
+    
+    #svg ul{
+        text-align: center;
+        margin-left: -50px;
+        align-items: center;
+        margin-top: 90px;
+    }
+    
+    li{
+        font: 16px 'montserrat';
+    }
+    
+    aside{
+        background-color: #7ABFBF;
+    }
+    h3{
+        font: 25px 'bebas neue';  
+    }
+    
+    aside{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    aside img{
+        float: left;
+        transform: scale(65%);
+        margin-top: -100px;
+        margin-left: -10px;
+    
+    }
+    aside h3{
+        margin-left: 200px;
+    }
+
+    #main-nav {
+        width: 80%;
+        height: 240px;
+    }
+    #main-nav li{
+        width: 80px;
+    }
+    #main-nav a {
+        width: 70px;
+    }
+    
+    .hamburger-icon {
+        display: none;
+    }
+    
+    #main-nav label, #dropdown{
+        visibility: hidden;
+    }
+    
+    [href="#home"] {
+        left: -70px;
+    }
+    
+    .icon-tabler-tools-kitchen {
+      background-color: #EB5428;
+      position: absolute;
+      padding: 28px 15px;
+    }
+    
+    #main-nav img {
+        width: 50px;
+    }
+    
+    #main-nav ul {
+        list-style: none;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+    
+    .nav-text {
+        position: relative;
+        top: 70px;
+        margin-left: -30px;
+    }
+    
+    .breakfast, .brunch, .lunch, .dinner, .appetizers, .desserts, .beverages {
+        visibility: visible;
+        display: flex;
+        position: relative;
+        top: -30px;
+        left: 15%;
+    }
+    
+    .search {
+        display: flex;
+        position: fixed;
+        top: 25px;
+        right: -150px;
+        z-index: 1;
+    }
+    
+    .search input {
+        border: 3px solid #EB5428;
+        padding: 5px;
+        background-color: #FFFFFF;
+        width: 250px;
+    }
+    
+    button {
+        background-color: #EB5428;
+        border-style: none;
+        cursor: pointer;
+    }
+    
+    .icon-tabler-search {
+       stroke: #FFFFFF;
+    }
+    
+    #connect{
+        display: inline-block;
+        padding-top: 40px;
+        margin-left: 360px;
+    }
+    
+    #connect ul{
+        list-style: none;
+        text-align: center;
+    
+    }
+    #connect li{
+        color: #EB5428;
+        font: 16px "bebas neue";
+    
+    }
+    #connect figure{
+        display: inline-block;
+        margin-left: 0;
+    }
+    #connect img{
+        clear: both;
+        margin-top: -60px;;
+    }
+
+    footer h2{
+        visibility: hidden;
+    }
+    footer p{
+        font: 20px 'bebas neue';
+        text-align: center;
+        width: 200px;
+        margin: 90px;
+        padding-top: 20px;
+    }
+    footer img{
+        clear:both;
+        display: block;
+    }
+    #details{
+        text-align:center;
+    }
+    #ingredients{
+        display: inline-block;
+        width: 160px;
+    }
+
+    #ingredients h2{
+        margin-bottom: 10px;
+    }
+
+    #ingredients li{
+        margin: 4px 0;
+    }
+
+    #directions{
+        width: 550px;
+    }
+    #ingredients, #directions{
+        margin: 0 auto;
+        display: inline-block;
+    }
+    .list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .list h3{
+        margin-left: 220px;
+    }
+  }
+
+
+
+  @media screen and (min-width: 1280px) {
+
+    body{
+        width: 80%;
+    }
+
+    .icon-tabler-search {
+       top: 0px;
+    }
+    #main-nav{
+        position: absolute;
+    }
+    h1{
+        text-align: center;
+        margin-top: 170px;
+        margin-bottom: -20px;
+    }
+    #svg{
+        display: inline-block;
+        background-color: rgba(255, 255, 255);
+        width: 90px;
+        height: 755px;
+        position: relative;
+        
+    }
+    
+    #svg ul{
+        margin: 0 0;
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 10px;
+
+    }
+    #svg li{
+        color: #EB5428;
+        font: 16px "bebas neue";
+    }
+    
+    .tacos{
+        width: 100%;
+        display: inline-block;
+        margin-top: 1px;
+    }
+    #text{
+        display:inline-block;
+        width: 670px;
+        position:absolute;
+        padding-left: 10px;
+        line-height: 30px;
+    }
+
+    #altNav, #tacoimg, #text{
+        margin-bottom: -900px;
+    
+    } 
+
+    #details{
+        background-color:black;
+        color: #7ABFBF;
+        padding-top:5px;
+        padding-bottom: 20px;
+        
+    }
+
+    #details div {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    dl{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #ingredients{
+        display: inline-block;
+        width: 300px;
+    }
+
+    #ingredients h2{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #ingredients li{
+        margin: 4px 0;
+    }
+
+    #directions{
+        width: 950px;
+        position: absolute;
+    }
+    #ingredients, #directions{
+        margin: 1rem auto;
+        display: inline-block;
+    }
+    .list{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 100px;
+    }
+    .list section{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    aside h2{
+        margin-bottom: -100px;
+        padding-bottom: 10px;
+    }
+    #connect{
+        display: inline-block;
+        padding-top: 50px;
+        margin-left: 720px;
+    }
+    
+    #connect ul{
+        margin: 0;
+        list-style: none;
+        text-align: center:
+    
+    }
+    #connect li{
+        color: #EB5428;
+        font: 16px "bebas neue";
+    
+    }
+    #connect figure{
+        display: inline-block;
+        margin-left: 0;
+        margin-top: -10px
+    }
+
+    #Connect figure, #connect li{
+        padding-left: 20px;
+        align-items: center;
+    }
+
+    footer{
+        display: inline-block;
+    }
+
+    footer p{
+        font: 20px 'bebas neue';
+        text-align: center;
+        top: -170px;
+        left: 200px;
+        position:relative;
+
+    }
+    footer img{
+        transform: scale(50%);
+        margin-top: -550px;
+        margin-left: -50px;
+        padding-top: 20px;   
+        display: flex;
+    }
+    #main-nav {
+        width: 1280px;
+        height: 162px;
+        z-index: 2;
+    }
+    
+    [href="#home"] {
+        left: -70px;
+        top: 19px;
+        padding-left: 57px;
+    }
+    
+    .icon-tabler-tools-kitchen {
+      padding: 31px 13px;
+    }
+    
+    #main-nav img {
+        width: 50px;
+    }
+    
+    #main-nav ul {
+        list-style: none;
+        overflow: visible;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -7px;
+    }
+    
+    .nav-text {
+        position: relative;
+        top: 55px;
+    }
+    
+    .breakfast, .brunch, .lunch, .dinner, .appetizers, .desserts, .beverages {
+        top: -30px;
+        left: 15%;
+    }
+    
+    .icon-tabler-user-circle {
+        top: -10px;
+        left: 130px;
+      }
+    
+      .avatar {
+        top: 115px;
+        right: 27px;
+      }
+      .search{
+        margin-top: -40px;
+      }
+}
